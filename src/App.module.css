@@ -1,0 +1,364 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	background-color: black;
+	background: url("https://cdn01.cimediacloud.com/cifiles/8d845bf1ab064e5cab19c38cb919aabb/renditions/thumbnail-2000px.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NkbjAxLmNpbWVkaWFjbG91ZC5jb20vY2lmaWxlcy84ZDg0NWJmMWFiMDY0ZTVjYWIxOWMzOGNiOTE5YWFiYi9yZW5kaXRpb25zL3RodW1ibmFpbC0yMDAwcHguanBnIiwiQ29uZGl0aW9uIjp7IklwQWRkcmVzcyI6eyJBV1M6U291cmNlSXAiOiIwLjAuMC4wLzAifSwiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE5OTM0MjA4MDB9fX1dfQ__&Signature=DZD43YZdwWbMIzXc5Io65vv-HvYRvQZDAIZ00BEDtvdc7GEJJEnImAK2iw0Gj5m2RdyryVq3wGMh92D9NmHWcPw58mltlSOEmiBotAoLR5Uj26f6eN6MlkbSOhdJ2CRatKos69~tqBeLiYe8b6k6o43OjLSZk5W3R5GFk7kkXkU_&Key-Pair-Id=APKAJNUSFH4IKQRZ44WA")
+		no-repeat;
+	background-size: 100vw 100vh;
+}
+
+h1 {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.questionDiv {
+	position: relative;
+	left: 25vw;
+	right: 25vw;
+	width: 50vw;
+	height: 30vh;
+	margin: 10px;
+	border: 4px double white;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: rgb(42, 36, 36, 0.95);
+	color: white;
+	font-size: xx-large;
+}
+
+.mainDiv {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+	left: 25vw;
+	right: 25vw;
+	width: 50vw;
+	height: 30vh;
+	margin: 10px;
+	border: 4px double white;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: rgb(16, 15, 15);
+	color: white;
+	font-size: xx-large;
+}
+
+.intro-message {
+	flex-basis: 100%;
+	text-align: center;
+}
+
+.playButton {
+	border: none;
+	background-color: rgb(16, 15, 15);
+	color: white;
+	font-size: larger;
+}
+
+.playButton:hover {
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+.question {
+	width: calc(50vh - 40px);
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 5px double white;
+	border-radius: 30px;
+	background-color: black;
+	color: white;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.questionPending {
+	width: calc(50vh - 40px);
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 5px double white;
+	border-radius: 30px;
+	background-color: darkorange;
+	color: white;
+	font-size: 24px;
+}
+
+.wrapper {
+	position: relative;
+	left: 25vw;
+	width: 50vw;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	margin-left: 3vw;
+	line-height: calc(80px);
+	color: white;
+}
+
+.areYouSure {
+	position: relative;
+	top: -185px;
+	left: 11vw;
+	width: calc(50vh - 40px);
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-color: black;
+	border: 5px double white;
+	border-radius: 30px;
+	color: white;
+}
+
+.areYouSureButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-basis: 25%;
+	border: 0px;
+	border-radius: 20px;
+	background-color: black;
+	color: white;
+	font-size: x-large;
+	cursor: pointer;
+}
+
+.sidebar {
+	width: 300px;
+	height: 60vh;
+	z-index: 99;
+	position: absolute;
+	top: 9vh;
+	left: 80vw;
+	border: 5px double white;
+	border-radius: 30px;
+	padding: 10px;
+	background-color: black;
+	color: white;
+}
+
+.lifeline-button {
+	background-color: red;
+}
+
+.fifty-fifty-button {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 100%;
+	background: url("./assets/pics/fifty-fifty.jpg") 0.5px;
+	background-size: 100% 100%;
+}
+
+.phone-friend-button {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 100%;
+	background: url("./assets/pics/nazovi-prijatelja.jpg") 0.5px;
+	background-size: 100% 100%;
+}
+
+.ask-audience-button {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 100%;
+	background: url("./assets/pics/pitaj-publiku.jpg") 0.5px;
+	background-size: 100% 100%;
+}
+
+.fifty-fifty-button:hover,
+.phone-friend-button:hover,
+.ask-audience-button:hover {
+	transform: scale(1.1);
+}
+
+.money-list {
+	position: relative;
+	left: 2vw;
+}
+
+.money-list > li::marker {
+	color: red;
+}
+
+.money-list > li {
+	width: fit-content;
+	font-size: 27px;
+}
+
+.phone-friend-screen {
+	position: absolute;
+	left: 30%;
+	width: 20vw;
+	height: 15vw;
+	z-index: 9999;
+	border: 2px double white;
+	border-radius: 20px;
+	background-color: black;
+}
+
+.hidden {
+	display: none;
+}
+
+.crossed-fifty-fifty-button {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 100%;
+	background: url("./assets/pics/crossed-fifty-fifty.jpg") 0.5px;
+	background-size: 100% 100%;
+}
+
+.crossed-phone-friend-button {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 100%;
+	background: url("./assets/pics/crossed-nazovi-prijatelja.jpg") 0.5px;
+	background-size: 100% 100%;
+}
+
+.crossed-ask-audience-button {
+	width: 100px;
+	height: 50px;
+	border: none;
+	border-radius: 100%;
+	background: url("./assets/pics/crossed-pitaj-publiku.jpg") 0.5px;
+	background-size: 100% 100%;
+}
+
+.ask-audience-screen {
+	display: flex;
+	display: hidden;
+	flex-direction: row;
+	align-items: center;
+	position: absolute;
+	left: 12vw;
+	top: -5vh;
+	width: 25vw;
+	height: 20vw;
+	min-width: 200px;
+	min-height: 200px;
+	z-index: 2;
+	border: 2px double white;
+	border-radius: 20px;
+	background-color: black;
+	font-size: 10px;
+}
+
+.ask-audience-icon {
+	position: absolute;
+	left: 22.5vw;
+	z-index: 5;
+	width: 5vw;
+	height: 5vh;
+	margin-bottom: 10vh;
+	border: none;
+	border-radius: 100%;
+	background: url("./assets/pics/pitaj-publiku.jpg") 0.5px;
+	background-size: 100% 100%;
+}
+
+.timer-div {
+	position: absolute;
+	right: 50%;
+	top: 90%;
+	font-size: 25px;
+}
+
+.audience-results-color {
+	background: linear-gradient(darkBlue, blue);
+	border-radius: 4px;
+}
+
+@media (max-width: 480px) {
+	.mainDiv {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 12px;
+		left: 15vw;
+		right: 25vw;
+		width: 50vw;
+		height: 30vh;
+		margin: 10px;
+		border: 4px double white;
+		border-radius: 20px;
+		padding: 10px;
+		background-color: rgb(16, 15, 15);
+		color: white;
+		font-size: small;
+	}
+
+	body {
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+		background-color: black;
+		background: url("https://cdn01.cimediacloud.com/cifiles/8d845bf1ab064e5cab19c38cb919aabb/renditions/thumbnail-2000px.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NkbjAxLmNpbWVkaWFjbG91ZC5jb20vY2lmaWxlcy84ZDg0NWJmMWFiMDY0ZTVjYWIxOWMzOGNiOTE5YWFiYi9yZW5kaXRpb25zL3RodW1ibmFpbC0yMDAwcHguanBnIiwiQ29uZGl0aW9uIjp7IklwQWRkcmVzcyI6eyJBV1M6U291cmNlSXAiOiIwLjAuMC4wLzAifSwiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE5OTM0MjA4MDB9fX1dfQ__&Signature=DZD43YZdwWbMIzXc5Io65vv-HvYRvQZDAIZ00BEDtvdc7GEJJEnImAK2iw0Gj5m2RdyryVq3wGMh92D9NmHWcPw58mltlSOEmiBotAoLR5Uj26f6eN6MlkbSOhdJ2CRatKos69~tqBeLiYe8b6k6o43OjLSZk5W3R5GFk7kkXkU_&Key-Pair-Id=APKAJNUSFH4IKQRZ44WA")
+			no-repeat fixed;
+		background-size: 100vw 100vh;
+	}
+
+	.sidebar {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.mainDiv {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 12px;
+		left: 5vw;
+		right: 25vw;
+		width: 50vw;
+		height: 30vh;
+		margin: 10px;
+		border: 4px double white;
+		border-radius: 20px;
+		padding: 10px;
+		background-color: rgb(16, 15, 15);
+		color: white;
+		font-size: xx-large;
+	}
+	body {
+		margin: 0;
+		padding: 0;
+		font-size: 16px;
+		background-color: black;
+		background: url("https://cdn01.cimediacloud.com/cifiles/8d845bf1ab064e5cab19c38cb919aabb/renditions/thumbnail-2000px.jpg?Policy=eyJTdGF0ZW1lbnQiOlt7IlJlc291cmNlIjoiKjovL2NkbjAxLmNpbWVkaWFjbG91ZC5jb20vY2lmaWxlcy84ZDg0NWJmMWFiMDY0ZTVjYWIxOWMzOGNiOTE5YWFiYi9yZW5kaXRpb25zL3RodW1ibmFpbC0yMDAwcHguanBnIiwiQ29uZGl0aW9uIjp7IklwQWRkcmVzcyI6eyJBV1M6U291cmNlSXAiOiIwLjAuMC4wLzAifSwiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE5OTM0MjA4MDB9fX1dfQ__&Signature=DZD43YZdwWbMIzXc5Io65vv-HvYRvQZDAIZ00BEDtvdc7GEJJEnImAK2iw0Gj5m2RdyryVq3wGMh92D9NmHWcPw58mltlSOEmiBotAoLR5Uj26f6eN6MlkbSOhdJ2CRatKos69~tqBeLiYe8b6k6o43OjLSZk5W3R5GFk7kkXkU_&Key-Pair-Id=APKAJNUSFH4IKQRZ44WA")
+			no-repeat fixed;
+		background-size: 100vw 100vh;
+	}
+	.sidebar {
+		width: 250px;
+		height: 60vh;
+		z-index: 99;
+		position: absolute;
+		top: 8vh;
+		left: 62vw;
+		border: 5px double white;
+		border-radius: 30px;
+		padding: 10px;
+		background-color: black;
+		color: white;
+	}
+}
