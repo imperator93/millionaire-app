@@ -7,6 +7,19 @@ body {
 		no-repeat;
 	background-size: 100vw 100vh;
 }
+.server-offline {
+	background-color: black;
+	position: absolute;
+	top: 60vh;
+	left: 30vw;
+	width: fit-content;
+	height: fit-content;
+	border-radius: 20px;
+	padding: 10px;
+	background-color: rgb(42, 36, 36, 0.95);
+	color: white;
+	font-size: 100px;
+}
 
 h1 {
 	position: relative;

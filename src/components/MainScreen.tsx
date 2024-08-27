@@ -50,7 +50,6 @@ export const MainScreen = (props: {
 							onClick={() => {
 								props.setQuestionOnScreen(true);
 								props.setIntro(false);
-								console.log(props.question);
 							}}
 						>
 							Play
@@ -78,7 +77,7 @@ export const MainScreen = (props: {
 									}
 									onClick={(event) => {
 										props.onAnswerClicked(event);
-										!props.intro && props.setAnswerPending(true);
+										props.setAnswerPending(true);
 									}}
 									id={item._id}
 									className={

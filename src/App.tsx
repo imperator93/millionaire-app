@@ -13,6 +13,7 @@ function App() {
 	const [answerPending, setAnswerPending] = useState<boolean>(false);
 	const [questionCounter, setQuestionCounter] = useState<number>(0);
 	const [correctId, setCorrectId] = useState<string>("");
+	const [youAreCorrect, setYouAreCorrect] = useState<boolean>(false);
 	const [youAreWrong, setYouAreWrong] = useState<boolean>(false);
 	const [questionOnScreen, setQuestionOnScreen] = useState<boolean>(false);
 	const [lifelines, setLifelines] = useState<{
@@ -41,7 +42,6 @@ function App() {
 	const onAnswerClicked = (event: React.BaseSyntheticEvent) => {
 		setCorrectId(event.target.id);
 	};
-	console.log(question);
 	const onConfirmAnswer = () => {
 		const correctAnswer = question[questionCounter].answers.filter(
 			(item) => item.isCorrect
@@ -51,11 +51,13 @@ function App() {
 		setTimeout(() => setQuestionOnScreen(true), 2000);
 
 		if (correctAnswer._id === correctId) {
+			setYouAreCorrect(true);
 			setTimeout(() => {
 				question[questionCounter].isCurrentQuestion = false;
 				question[questionCounter + 1].isCurrentQuestion = true;
 				setQuestion([...question]);
 				setQuestionCounter(questionCounter + 1);
+				setYouAreCorrect(false);
 			}, 2000);
 		} else {
 			setYouAreWrong(true);
@@ -94,22 +96,21 @@ function App() {
 					}
 				});
 				setQuestion([...question]);
-				console.log("prvi");
 
 				break;
 			case "phone-friend":
 				lifelines["phone-friend"].isUsed = true;
 				setLifelines({ ...lifelines });
-				console.log("drugi");
 
 				break;
 			case "ask-audience":
 				lifelines["ask-audience"].isUsed = true;
 				setLifelines({ ...lifelines });
-				console.log("treci");
 		}
 	};
 
+	if (question.length === 0)
+		return <div className={style["server-offline"]}>{"SERVER OFFLINE"}</div>;
 	return (
 		<>
 			<MainScreen
@@ -136,6 +137,9 @@ function App() {
 				questionOnScreen={questionOnScreen}
 				intro={intro}
 				lifelines={lifelines}
+				answerPending={answerPending}
+				youAreWrong={youAreWrong}
+				youAreCorrect={youAreCorrect}
 				handleLifelineClick={handleLifelineClick}
 			/>
 		</>

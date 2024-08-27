@@ -7,6 +7,9 @@ export const ProgressSidebar = (props: {
 	questionOnScreen: boolean;
 	intro: boolean;
 	lifelines: { [key: string]: { isUsed: boolean; styleClass: string } };
+	answerPending: boolean;
+	youAreWrong: boolean;
+	youAreCorrect: boolean;
 	handleLifelineClick: (event: React.BaseSyntheticEvent) => void;
 }) => {
 	const moneyList = [
@@ -34,7 +37,13 @@ export const ProgressSidebar = (props: {
 		<div className={props.style["sidebar"]}>
 			{Object.entries(props.lifelines).map(([key, value]) => (
 				<button
-					disabled={props.intro || key == (props.lifelines[key].isUsed && key)}
+					disabled={
+						props.intro ||
+						props.answerPending ||
+						props.youAreWrong ||
+						props.youAreCorrect ||
+						key == (props.lifelines[key].isUsed && key)
+					}
 					onClick={(event) => props.handleLifelineClick(event)}
 					key={key}
 					id={key}
