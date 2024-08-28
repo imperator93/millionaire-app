@@ -59,8 +59,8 @@ export const MainScreen = (props: {
 					(props.questionOnScreen
 						? props.question[props.questionCounter].content
 						: !props.youAreWrong
-						? "Bravo majmune"
-						: "A jes glup")}
+						? "Good job"
+						: "Better luck next time")}
 			</div>
 
 			{!props.intro && (

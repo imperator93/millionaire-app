@@ -6,6 +6,7 @@ import { Question } from "./models/question.model";
 
 import { MainScreen } from "./components/MainScreen";
 import { ProgressSidebar } from "./components/ProgressSidebar";
+import { AddQuestions } from "./components/AddQuestions";
 
 function App() {
 	const [intro, setIntro] = useState<boolean>(true);
@@ -109,10 +110,15 @@ function App() {
 		}
 	};
 
-	if (question.length === 0)
-		return <div className={style["server-offline"]}>{"SERVER OFFLINE"}</div>;
+	if (question.length === 0) {
+		setTimeout(() => {
+			<div className={style["server-offline"]}>{"SERVER OFFLINE"}</div>;
+		}, 2000);
+		return <div className={style["server-offline"]}>{"Loading..."}</div>;
+	}
 	return (
 		<>
+			<AddQuestions intro={intro} />
 			<MainScreen
 				style={style}
 				intro={intro}

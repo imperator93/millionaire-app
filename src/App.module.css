@@ -38,6 +38,8 @@ h1 {
 	padding: 10px;
 	background-color: rgb(42, 36, 36, 0.95);
 	color: white;
+	text-align: center;
+	align-content: center;
 	font-size: xx-large;
 }
 
@@ -148,7 +150,7 @@ h1 {
 .sidebar {
 	width: 300px;
 	height: 60vh;
-	z-index: 99;
+	z-index: 10;
 	position: absolute;
 	top: 9vh;
 	left: 80vw;
@@ -215,7 +217,7 @@ h1 {
 	left: 30%;
 	width: 20vw;
 	height: 15vw;
-	z-index: 9999;
+	z-index: 20;
 	border: 2px double white;
 	border-radius: 20px;
 	background-color: black;
@@ -364,7 +366,7 @@ h1 {
 	.sidebar {
 		width: 250px;
 		height: 60vh;
-		z-index: 99;
+		z-index: 10;
 		position: absolute;
 		top: 8vh;
 		left: 62vw;
@@ -374,4 +376,60 @@ h1 {
 		background-color: black;
 		color: white;
 	}
+}
+
+.add-questions-button {
+	position: absolute;
+	top: 0;
+}
+
+.add-question-main-div {
+	z-index: 15;
+	position: absolute;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(5px);
+}
+
+.add-question-div {
+	display: flex;
+	flex-direction: column;
+	width: 20vw;
+	height: fit-content;
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 10px;
+	background-color: black;
+}
+
+.close-add-question-button {
+	width: fit-content;
+	align-self: flex-end;
+	border: none;
+	background-color: transparent;
+	color: white;
+	font-size: larger;
+}
+
+.question-form {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.question-form > * {
+	flex-basis: 100%;
+}
+
+label {
+	color: white;
+}
+
+.input-wrapper {
+	display: flex;
+	gap: 10px;
 }
